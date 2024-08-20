@@ -4,8 +4,13 @@ Group no 1:
 Syed Shameer (Game Developer) 
 Mohsin Sheikh(Game Developer) 
 Rida Naseer(UI/UX Designer) 
-Adventures of Rambo - Production Timeline 
-NOTE: A week comprises working days – no weekends. 
+
+
+#Adventures of Rambo - Production Timeline 
+NOTE: A week comprises working days – no weekends.
+
+
+
 Week 1 (15th August - 21st August 2024): 
 Development (Syed Shameer/ Mohsin Sheikh): 
 •	Core Mechanics: 
@@ -18,7 +23,9 @@ o	Design the first level layout (placeholder art). o 	Set up the environment for
 Art (Rida Naseer): 
 •	Environment Art: 
 o	Develop initial background assets for the winter season (rooftop in snow). 
-Test build delivery on 21st August 2024. 
+Test build delivery on 21st August 2024.
+
+
 Week 2 (22nd August - 28th August 2024): 
 Development (Syed Shameer/ Mohsin Sheikh): 
 •	Game Mechanics: 
@@ -29,7 +36,9 @@ o	Integrate winter environment assets. o 	Design and implement the second level 
 Art (Rida Naseer): 
 •	Additional Environmental Art: 
 o	Develop background assets for the summer season (rooftop in sunlight). 
-Test build delivery on 28th August 2024. 
+Test build delivery on 28th August 2024.
+
+
  
 Week 3 (29th August - 4th September 2024): 
 Development (Syed Shameer / Mohsin Sheikh): 
@@ -44,7 +53,10 @@ Art (Rida Naseer):
 •	Logo & Branding: o Design the game logo. 
 •	UI Elements: 
 o	Create assets for UI elements (buttons, icons, menus). 
-Test build delivery on 4th September 2024. 
+Test build delivery on 4th September 2024.
+
+
+
 Week 4 (5th September - 11th September 2024): 
 Development (Syed Shameer / Mohsin Sheikh): 
 •	Polishing: 

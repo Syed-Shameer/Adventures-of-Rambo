@@ -9,10 +9,13 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 movevector = Vector2.zero;
     private Rigidbody2D rb = null;
     private float moveSpeed = 10f;
+    private Animator anim;
+    
 
     private void Awake() {
         input = new CustomInput();
         rb =GetComponent<Rigidbody2D>();
+        anim =GetComponent<Animator>();
     }
     private void OnEnable() {
         input.Enable();
@@ -36,4 +39,16 @@ public class PlayerMovement : MonoBehaviour
         movevector = Vector2.zero;
 
     }
+    private void Update() {
+    if (movevector == Vector2.zero)
+    {
+        anim.SetBool("isRunning",false);
+        
+    }
+    else
+    {
+        anim.SetBool("isRunning", true );
+    }    
+    }
+    
 }

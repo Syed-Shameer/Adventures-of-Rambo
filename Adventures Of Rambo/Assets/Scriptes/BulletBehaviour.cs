@@ -55,12 +55,11 @@ public class BulletBehaviour : MonoBehaviour
             //play sound FX
             //Screen Shake
             //Damage Enemy
-             IDamagable iDamagable = collision.gameObject.GetComponent<IDamagable>();
-             if (iDamagable != null)
-             {
-                //damage enemy
-                iDamagable.Damage(damage);
-                
+          IDamagable iDamagable = collision.gameObject.GetComponent<IDamagable>();
+              if (iDamagable != null)
+                {
+                 //damage enemy
+                 iDamagable.Damage(damage);    
              }
 
             //Destroy Bullet

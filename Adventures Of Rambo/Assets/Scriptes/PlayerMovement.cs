@@ -16,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
         input = new CustomInput();
         rb =GetComponent<Rigidbody2D>();
         anim =GetComponent<Animator>();
+        
     }
     private void OnEnable() {
         input.Enable();
@@ -31,6 +32,8 @@ public class PlayerMovement : MonoBehaviour
     }
      private void FixedUpdate() {
          rb.velocity = movevector * moveSpeed;
+         Debug.Log("Velocity Set To: " + rb.velocity);
+         Debug.Log("Position: " + transform.position);
      }
     private void OnMovementPerformed(InputAction.CallbackContext value){
         movevector = value.ReadValue<Vector2>();

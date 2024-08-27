@@ -9,13 +9,14 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 movevector = Vector2.zero;
     private Rigidbody2D rb = null;
     private float moveSpeed = 10f;
-    //private Animator anim;
+    private Animator anim;
     
 
     private void Awake() {
         input = new CustomInput();
         rb =GetComponent<Rigidbody2D>();
-        //anim =GetComponent<Animator>();
+        anim =GetComponent<Animator>();
+        
     }
     private void OnEnable() {
         input.Enable();
@@ -28,9 +29,12 @@ public class PlayerMovement : MonoBehaviour
         input.Player.Movement.canceled -= OnMovementCanceled;
     
     }
-    private void FixedUpdate() {
-        rb.velocity = movevector * moveSpeed;
-    }
+     private void FixedUpdate() {
+         rb.velocity = movevector * moveSpeed;
+         Debug.Log("Velocity Set To: " + rb.velocity);
+         Debug.Log("Position: " + transform.position);
+         RunCheck();
+     }
     private void OnMovementPerformed(InputAction.CallbackContext value){
         movevector = value.ReadValue<Vector2>();
 
@@ -39,16 +43,16 @@ public class PlayerMovement : MonoBehaviour
         movevector = Vector2.zero;
 
     }
-    // private void Update() {
-    // if (movevector == Vector2.zero)
-    // {
-    //     anim.SetBool("isRunning",false);
+    private void RunCheck() {
+     if (movevector == Vector2.zero)
+     {
+         anim.SetBool("isRunning",false);
         
-    // }
-    // else
-    // {
-    //     anim.SetBool("isRunning", true );
-    // }    
-    // }
+     }
+     else
+     {
+         anim.SetBool("isRunning", true );
+     }    
+     }
     
 }

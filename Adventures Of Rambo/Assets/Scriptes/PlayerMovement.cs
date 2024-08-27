@@ -22,7 +22,6 @@ public class PlayerMovement : MonoBehaviour
         input.Enable();
         input.Player.Movement.performed += OnMovementPerformed;
         input.Player.Movement.canceled += OnMovementCanceled;
-        RunCheck();
     }
     private void OnDisable() {
         input.Disable();
@@ -34,6 +33,7 @@ public class PlayerMovement : MonoBehaviour
          rb.velocity = movevector * moveSpeed;
          Debug.Log("Velocity Set To: " + rb.velocity);
          Debug.Log("Position: " + transform.position);
+         RunCheck();
      }
     private void OnMovementPerformed(InputAction.CallbackContext value){
         movevector = value.ReadValue<Vector2>();

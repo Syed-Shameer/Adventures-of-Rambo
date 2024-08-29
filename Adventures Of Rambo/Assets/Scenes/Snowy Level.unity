@@ -372,6 +372,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 5037142861548888487}
   m_PrefabAsset: {fileID: 0}
+--- !u!50 &1803462408 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 5037142862804833576, guid: a10c187cde5852d4faafbe4ede7ed2a7,
+    type: 3}
+  m_PrefabInstance: {fileID: 5037142861548888487}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1803462411
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -607,7 +613,7 @@ PrefabInstance:
     - target: {fileID: 5037142862804833578, guid: a10c187cde5852d4faafbe4ede7ed2a7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.97
+      value: -10.16
       objectReference: {fileID: 0}
     - target: {fileID: 5037142862804833578, guid: a10c187cde5852d4faafbe4ede7ed2a7,
         type: 3}
@@ -679,6 +685,17 @@ PrefabInstance:
       propertyPath: bulletSpawnPoint
       value: 
       objectReference: {fileID: 863091896}
+    - target: {fileID: 5037142862804833590, guid: a10c187cde5852d4faafbe4ede7ed2a7,
+        type: 3}
+      propertyPath: rb
+      value: 
+      objectReference: {fileID: 1803462408}
+    - target: {fileID: 5037142862804833590, guid: a10c187cde5852d4faafbe4ede7ed2a7,
+        type: 3}
+      propertyPath: move
+      value: 
+      objectReference: {fileID: -4793441206272944734, guid: ffb305151de62ac469a89ccdb3ef1b52,
+        type: 3}
     - target: {fileID: 5037142862804833590, guid: a10c187cde5852d4faafbe4ede7ed2a7,
         type: 3}
       propertyPath: m_Enabled

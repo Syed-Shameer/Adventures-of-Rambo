@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb = null;
     private float moveSpeed = 10f;
     private Animator anim;
-    
+   
 
     private void Awake() {
         input = new CustomInput();
@@ -29,12 +29,11 @@ public class PlayerMovement : MonoBehaviour
         input.Player.Movement.canceled -= OnMovementCanceled;
     
     }
-     private void FixedUpdate() {
-         rb.velocity = movevector * moveSpeed;
-         Debug.Log("Velocity Set To: " + rb.velocity);
-         Debug.Log("Position: " + transform.position);
+    private void FixedUpdate() {
+        rb.velocity = movevector * moveSpeed;
          RunCheck();
-     }
+    }
+   
     private void OnMovementPerformed(InputAction.CallbackContext value){
         movevector = value.ReadValue<Vector2>();
 
@@ -43,16 +42,16 @@ public class PlayerMovement : MonoBehaviour
         movevector = Vector2.zero;
 
     }
-    private void RunCheck() {
-     if (movevector == Vector2.zero)
-     {
-         anim.SetBool("isRunning",false);
+     private void RunCheck() {
+      if (movevector == Vector2.zero)
+      {
+          anim.SetBool("isRunning",false);
         
-     }
-     else
-     {
-         anim.SetBool("isRunning", true );
-     }    
-     }
+      }
+      else
+      {
+          anim.SetBool("isRunning", true );
+      }    
+      }
     
 }

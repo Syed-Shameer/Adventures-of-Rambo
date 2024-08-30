@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420030}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -147,6 +148,23 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
+--- !u!114 &519420030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8edbc28ddd7a2d94fa33393bacf9b581, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTransform: {fileID: 1803462410}
+  offset: {x: 0, y: 1, z: -10}
+  smoothSpeed: 0.125
+  minX: 0
+  maxX: 122
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -375,6 +393,12 @@ GameObject:
 --- !u!50 &1803462408 stripped
 Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 5037142862804833576, guid: a10c187cde5852d4faafbe4ede7ed2a7,
+    type: 3}
+  m_PrefabInstance: {fileID: 5037142861548888487}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1803462410 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5037142862804833578, guid: a10c187cde5852d4faafbe4ede7ed2a7,
     type: 3}
   m_PrefabInstance: {fileID: 5037142861548888487}
   m_PrefabAsset: {fileID: 0}
@@ -613,12 +637,12 @@ PrefabInstance:
     - target: {fileID: 5037142862804833578, guid: a10c187cde5852d4faafbe4ede7ed2a7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.16
+      value: -4.6
       objectReference: {fileID: 0}
     - target: {fileID: 5037142862804833578, guid: a10c187cde5852d4faafbe4ede7ed2a7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.82
+      value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 5037142862804833578, guid: a10c187cde5852d4faafbe4ede7ed2a7,
         type: 3}

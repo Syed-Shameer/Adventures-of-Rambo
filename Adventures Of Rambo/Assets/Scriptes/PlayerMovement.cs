@@ -10,15 +10,14 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb = null;
     private float moveSpeed = 10f;
     private Animator anim;
-    // private float jumpTimeCounter = 0.1f;
-    // private float jumpForce = 5f;
-    // private float jumpTime = null;
-    // private bool isJumping = null;
     private bool isJumping = false;
     private float jumpTimeCounter;
     [SerializeField] private float jumpForce = 10f;
     [SerializeField] private float jumpTime = 0.35f;
     private bool facingRight = true; // Track character's facing direction
+    private bool isSliding = false;
+    [SerializeField] private float slideSpeed = 15f; // Speed during sliding
+    [SerializeField] private float slideDuration = 0.5f; // Duration of the slide
 
    
 
@@ -32,15 +31,17 @@ public class PlayerMovement : MonoBehaviour
         input.Enable();
         input.Player.Movement.performed += OnMovementPerformed;
         input.Player.Movement.canceled += OnMovementCanceled;
-        input.Player.jump.performed += OnJumpPerformed; // Subscribe to Jump action
-        input.Player.jump.canceled += OnJumpCanceled; // Subscribe to Jump cancel action
+        input.Player.Jump.performed += OnJumpPerformed; // Subscribe to Jump action
+        input.Player.Jump.canceled += OnJumpCanceled; // Subscribe to Jump cancel action
+        input.Player.Slide.performed += OnSlidePerformed;
     }
     private void OnDisable() {
         input.Disable();
         input.Player.Movement.performed -= OnMovementPerformed;
         input.Player.Movement.canceled -= OnMovementCanceled;
-        input.Player.jump.performed -= OnJumpPerformed; // Unsubscribe to Jump action
-        input.Player.jump.canceled -= OnJumpCanceled; // Unsubscribe to Jump cancel action
+        input.Player.Jump.performed -= OnJumpPerformed; // Unsubscribe to Jump action
+        input.Player.Jump.canceled -= OnJumpCanceled; // Unsubscribe to Jump cancel action
+        input.Player.Slide.performed -= OnSlidePerformed;
 
     
     }
@@ -71,35 +72,20 @@ public class PlayerMovement : MonoBehaviour
       }    
       }
     
-    // private void JumpCheck(){
-    //     if (movevector == Vector2.zero && input.GetKeyDown(KeyCode.Spacebar))
-    //     {
-    //         anim.SetTrigger("takeoff");
-    //         isJumping = true;
-    //         jumpTimeCounter = jumpTime;
-    //         rb.velocity = Vector2.up * jumpForce;
-
-    //     }
-    //     else if(movevector == Vector2.zero){
-    //         anim.SetBool("isJumping",false);
-    //     } 
-    //     else
-    //     {
-    //         anim.SetBool("isJumping",true);
-    //     }
-    // }
+   
     private void JumpCheck() {
-    if (isJumping && jumpTimeCounter > 0) {
-        rb.velocity = Vector2.up * jumpForce;
-        jumpTimeCounter -= Time.fixedDeltaTime;
+        if (isJumping && jumpTimeCounter > 0) {
+            rb.velocity = Vector2.up * jumpForce;
+            jumpTimeCounter -= Time.fixedDeltaTime;
     }
 
-    if (movevector == Vector2.zero && !isJumping) {
-        anim.SetBool("isJumping", false);
-    } else {
-        anim.SetBool("isJumping", true);
+        if (movevector == Vector2.zero && !isJumping) {
+            anim.SetBool("isJumping", false);
+    } 
+        else {
+            anim.SetBool("isJumping", true);
     }
-}
+    }
     // Called when Jump action is performed (button pressed)
     private void OnJumpPerformed(InputAction.CallbackContext context) {
         if (movevector == Vector2.zero && !isJumping) {
@@ -109,7 +95,7 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = Vector2.up * jumpForce;
             anim.SetBool("isJumping", true); // Set Animator parameter for jumping
         }
-}
+    }
     // Called when Jump action is canceled (button released)
     private void OnJumpCanceled(InputAction.CallbackContext context) {
         isJumping = false;
@@ -130,5 +116,22 @@ public class PlayerMovement : MonoBehaviour
         Vector3 scale = transform.localScale;
         scale.x *= -1; // Invert the x-axis scale to flip the sprite
         transform.localScale = scale;
+    }
+    private void OnSlidePerformed(InputAction.CallbackContext context) {
+        if (!isSliding && movevector != Vector2.zero) { // Only slide if not already sliding and moving
+            StartCoroutine(Slide());
+        }
+        }
+    private  IEnumerator Slide() {
+        isSliding = true;
+        anim.SetBool("isSliding", true);
+
+        // Move the character at slide speed
+        rb.velocity = new Vector2(facingRight ? slideSpeed : -slideSpeed, rb.velocity.y);
+
+        yield return new WaitForSeconds(slideDuration);
+
+        anim.SetBool("isSliding", false);
+        isSliding = false;
     }
 }

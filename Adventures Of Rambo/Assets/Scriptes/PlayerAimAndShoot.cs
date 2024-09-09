@@ -13,6 +13,9 @@ public class PlayerAimAndShoot : MonoBehaviour
     private Vector2 worldPosition;
     private Vector2 direction;
     private float angle;
+    [SerializeField] private Transform dropPoint; // Point where the weapon will be dropped
+    [SerializeField] private Transform gunAttachmentPoint;
+
 
     // Update is called once per frame
     void Update()
@@ -30,7 +33,7 @@ public class PlayerAimAndShoot : MonoBehaviour
         }
 
         // Equip the new gun by instantiating it at the gun's position
-        gun = Instantiate(newGun, transform.position, Quaternion.identity, transform);
+        gun = Instantiate(newGun, gunAttachmentPoint.position, Quaternion.identity, transform);
     }
       // Method to drop the current gun
     public void DropGun()

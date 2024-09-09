@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     private bool isSliding = false;
     [SerializeField] private float slideSpeed = 15f; // Speed during sliding
     [SerializeField] private float slideDuration = 0.5f; // Duration of the slide
+    [SerializeField] private Transform BulletSpawnPoint; // Add this line
 
    
 
@@ -103,12 +104,12 @@ public class PlayerMovement : MonoBehaviour
     }
     // Flip the character's direction based on movement
     private void FlipCharacter() {
-        if (movevector.x > 0 && !facingRight) {
-            Flip();
-        } else if (movevector.x < 0 && facingRight) {
-            Flip();
-        }
+    if (movevector.x > 0 && !facingRight) {
+        Flip();
+    } else if (movevector.x < 0 && facingRight) {
+        Flip();
     }
+}
 
     // Flip the character by inverting the local scale
     private void Flip() {
@@ -116,7 +117,15 @@ public class PlayerMovement : MonoBehaviour
         Vector3 scale = transform.localScale;
         scale.x *= -1; // Invert the x-axis scale to flip the sprite
         transform.localScale = scale;
+
+    // Also flip the bullet spawn point
+    if (BulletSpawnPoint != null) {
+        Vector3 BulletSpawnScale = BulletSpawnPoint.localScale;
+        BulletSpawnScale.x *= -1; // Invert the x-axis for the bullet spawn point
+        BulletSpawnPoint.localScale = BulletSpawnScale;
     }
+    }
+
     private void OnSlidePerformed(InputAction.CallbackContext context) {
         if (!isSliding && movevector != Vector2.zero) { // Only slide if not already sliding and moving
             StartCoroutine(Slide());

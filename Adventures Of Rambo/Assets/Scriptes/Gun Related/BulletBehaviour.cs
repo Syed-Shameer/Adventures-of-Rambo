@@ -101,4 +101,11 @@ public class BulletBehaviour : MonoBehaviour
         Destroy(gameObject,destroytime);
 
     }
+    public float GetBulletSpeed() {
+    if (bulletType == BulletType.Normal) {
+        return normalBulletSpeed;
+    } else {
+        return physicsBulletSpeed;
+    }
+    }
 }

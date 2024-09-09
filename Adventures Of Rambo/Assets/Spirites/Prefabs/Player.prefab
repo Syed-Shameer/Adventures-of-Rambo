@@ -1889,6 +1889,7 @@ MonoBehaviour:
   jumpTime: 0.35
   slideSpeed: 15
   slideDuration: 0.5
+  BulletSpawnPoint: {fileID: 0}
 --- !u!114 &5037142862804833589
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1902,7 +1903,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gun: {fileID: 0}
-  bullet: {fileID: 0}
+  bullet: {fileID: 2332108662131015611, guid: 11d2df487b4918c429a4a1c11b0f926a, type: 3}
   bulletSpawnPoint: {fileID: 0}
   dropPoint: {fileID: 6476288874635408078}
   gunAttachmentPoint: {fileID: 723759591571878058}

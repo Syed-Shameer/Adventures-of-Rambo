@@ -7,15 +7,20 @@ public class Health : MonoBehaviour
     [SerializeField] private int maxHealth = 100; // Maximum health value
     private int currentHealth; // Current health value
     private RagdollController ragdollController;
+    private Rigidbody2D mainRigidbody;
+    private PlayerMovement playerMovement; // Reference to the input handling script
 
     private void Start()
     {
         // Set the current health to the maximum health at the start
         currentHealth = maxHealth;
 
-        // Get the RagdollController component attached to this GameObject
+        // Get the RagdollController and PlayerMovement components attached to this GameObject
         ragdollController = GetComponent<RagdollController>();
+        mainRigidbody = GetComponent<Rigidbody2D>();
+        playerMovement = GetComponent<PlayerMovement>(); // Adjust this line if your input script has a different name
     }
+
 
     // Method to apply damage to the character
     public void TakeDamage(int damage)
@@ -29,27 +34,29 @@ public class Health : MonoBehaviour
         }
     }
 
-    // Method to heal the character (optional)
-    public void Heal(int amount)
-    {
-        currentHealth += amount;
-        // Ensure health doesn't exceed max health
-        if (currentHealth > maxHealth)
-        {
-            currentHealth = maxHealth;
-        }
-    }
-
     // Method to handle character death
     private void Die()
     {
         // Activate the ragdoll effect
         ragdollController.ActivateRagdoll();
 
-        // Additional logic for death (e.g., disable movement, play sound, etc.)
-        // For example:
-        // GetComponent<PlayerMovement>().enabled = false;
-        // Play death sound, trigger game over, etc.
+        // Disable player movement/input handling
+        if (playerMovement != null)
+        {
+            playerMovement.enabled = false;
+        }
+
+        // Additional logic for death (e.g., play sound, trigger game over, etc.)
+    }
+
+    // Condition 1: Player dies when falling badly
+   private void OnCollisionEnter2D(Collision2D collision)
+    {
+        // Check if the collision is with an object tagged as "Enemy"
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            Die();
+        }
     }
 
     // Optional method to reset health (e.g., on respawn)
@@ -57,6 +64,11 @@ public class Health : MonoBehaviour
     {
         currentHealth = maxHealth;
         ragdollController.DeactivateRagdoll();
-        // Reactivate movement or other scripts if necessary
+
+        // Reactivate player movement/input handling
+        if (playerMovement != null)
+        {
+            playerMovement.enabled = true;
+        }
     }
 }

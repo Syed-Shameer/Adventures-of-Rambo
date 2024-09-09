@@ -134,4 +134,5 @@ public class PlayerMovement : MonoBehaviour
         anim.SetBool("isSliding", false);
         isSliding = false;
     }
+    
 }

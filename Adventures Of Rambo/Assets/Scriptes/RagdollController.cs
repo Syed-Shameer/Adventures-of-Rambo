@@ -1,52 +1,89 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class RagdollController : MonoBehaviour
 {
-    private Rigidbody2D[] rigidbodies;
-    private Collider2D[] colliders;
+    private Rigidbody2D mainRigidbody;
+    private Collider2D mainCollider;
     private Animator animator;
+
+    private List<Rigidbody2D> limbRigidbodies = new List<Rigidbody2D>();
+    private List<Collider2D> limbColliders = new List<Collider2D>();
+    private List<HingeJoint2D> limbJoints = new List<HingeJoint2D>();
 
     private void Awake()
     {
-        // Get all Rigidbody2D and Collider2D components from the child objects
-        rigidbodies = GetComponentsInChildren<Rigidbody2D>();
-        colliders = GetComponentsInChildren<Collider2D>();
+        mainRigidbody = GetComponent<Rigidbody2D>();
+        mainCollider = GetComponent<Collider2D>();
         animator = GetComponent<Animator>();
 
-        // Initially disable ragdoll behavior
-        SetRagdollState(false);
+        foreach (Rigidbody2D rb in GetComponentsInChildren<Rigidbody2D>())
+        {
+            if (rb != mainRigidbody)
+            {
+                limbRigidbodies.Add(rb);
+                rb.isKinematic = true;
+            }
+        }
+
+        foreach (Collider2D col in GetComponentsInChildren<Collider2D>())
+        {
+            if (col != mainCollider)
+            {
+                limbColliders.Add(col);
+                col.enabled = false;
+            }
+        }
+
+        foreach (HingeJoint2D joint in GetComponentsInChildren<HingeJoint2D>())
+        {
+            limbJoints.Add(joint);
+            joint.enabled = false;
+        }
     }
 
-    // Method to enable or disable the ragdoll state
-    public void SetRagdollState(bool state)
-    {
-        foreach (Rigidbody2D rb in rigidbodies)
-        {
-            rb.isKinematic = !state;
-        }
-
-        foreach (Collider2D col in colliders)
-        {
-            col.enabled = state;
-        }
-
-        if (animator != null)
-        {
-            animator.enabled = !state;
-        }
-    }
-
-    // Method to activate ragdoll (can be called when character dies or gets hit)
     public void ActivateRagdoll()
     {
-        SetRagdollState(true);
+        animator.enabled = false;
+        mainRigidbody.isKinematic = true;
+        mainCollider.enabled = false;
+
+        foreach (Rigidbody2D rb in limbRigidbodies)
+        {
+            rb.isKinematic = false;
+        }
+
+        foreach (Collider2D col in limbColliders)
+        {
+            col.enabled = true;
+        }
+
+        foreach (HingeJoint2D joint in limbJoints)
+        {
+            joint.enabled = true;
+        }
     }
 
-    // Method to deactivate ragdoll (can be used when respawning or resetting character)
     public void DeactivateRagdoll()
     {
-        SetRagdollState(false);
+        animator.enabled = true;
+        mainRigidbody.isKinematic = false;
+        mainCollider.enabled = true;
+
+        foreach (Rigidbody2D rb in limbRigidbodies)
+        {
+            rb.isKinematic = true;
+        }
+
+        foreach (Collider2D col in limbColliders)
+        {
+            col.enabled = false;
+        }
+
+        foreach (HingeJoint2D joint in limbJoints)
+        {
+            joint.enabled = false;
+        }
     }
 }
+

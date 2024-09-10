@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3485589887075141002}
   - component: {fileID: 1553585579532649029}
   - component: {fileID: 7719921790329802460}
+  - component: {fileID: 6740140479817017523}
   m_Layer: 0
   m_Name: Machine Gun
   m_TagString: Untagged
@@ -146,6 +147,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gunPrefab: {fileID: 3895676040037978137}
+--- !u!114 &6740140479817017523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3895676040037978137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0889f9e7d3dc5454ba7aaf74bee2b366, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireRate: 0.1
+  ammoCount: 30
+  bulletPrefab: {fileID: 2332108662131015611, guid: 11d2df487b4918c429a4a1c11b0f926a,
+    type: 3}
+  bulletSpawnPoint: {fileID: 5611334011058909657}
 --- !u!1 &4526032164846883456
 GameObject:
   m_ObjectHideFlags: 0

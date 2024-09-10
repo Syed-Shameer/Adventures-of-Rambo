@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 5248571778342780056}
   - component: {fileID: 2420289234228395717}
   - component: {fileID: 8278558393463625757}
+  - component: {fileID: 3733700383212514727}
   m_Layer: 0
   m_Name: Shotgun
   m_TagString: Untagged
@@ -175,3 +176,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gunPrefab: {fileID: 6445187659266152962}
+--- !u!114 &3733700383212514727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6445187659266152962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17058ecfeaa61984f9022bdeb62e2a44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 2332108662131015611, guid: 11d2df487b4918c429a4a1c11b0f926a,
+    type: 3}
+  bulletSpawnPoint: {fileID: 3328671120509060906}
+  fireRate: 1
+  ammoCount: 6
+  pelletsPerShot: 5

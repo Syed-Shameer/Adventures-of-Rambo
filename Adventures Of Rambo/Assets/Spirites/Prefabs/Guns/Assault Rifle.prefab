@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3904228645896606871}
   - component: {fileID: 3904228645896606870}
   - component: {fileID: 4383964863864033701}
+  - component: {fileID: 8705737197542953121}
   m_Layer: 0
   m_Name: Assault Rifle
   m_TagString: Untagged
@@ -146,6 +147,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gunPrefab: {fileID: 3904228645896606866}
+--- !u!114 &8705737197542953121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3904228645896606866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0220717c2cfee014d9781da4bfafd3b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 2332108662131015611, guid: 11d2df487b4918c429a4a1c11b0f926a,
+    type: 3}
+  bulletSpawnPoint: {fileID: 3904228646569882025}
+  fireRate: 0.1
+  ammoCount: 30
 --- !u!1 &3904228646569882022
 GameObject:
   m_ObjectHideFlags: 0

@@ -16,7 +16,7 @@ public class WeaponPickup : MonoBehaviour
 
             if (playerAimAndShoot != null)
             {
-                // Equip the weapon by enabling the gun prefab
+                // Equip the weapon by passing the gun prefab
                 playerAimAndShoot.EquipGun(gunPrefab);
                 
                 // Optionally, destroy the weapon pickup object

@@ -2,17 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class IGun : MonoBehaviour
+public interface IGuns
 {
-    [SerializeField] protected Transform BulletSpawnPoint;
-
-    public Transform GetBulletSpawnPoint()
-    {
-        return BulletSpawnPoint;
-    }
-
-    public abstract void Fire();
-
+    void Fire();
+    float GetFireRate();
+    int GetAmmoCount();
 }
+
 
 

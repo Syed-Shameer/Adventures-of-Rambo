@@ -9,6 +9,13 @@ public class MachineGun : MonoBehaviour, IGuns
     [SerializeField] private float fireRate = 0.07f;  // Very fast firing rate
     [SerializeField] private int ammoCount = 50;      // Large ammo count for sustained fire
     private float nextFireTime = 0f;
+    private PlayerAimAndShoot playerAimAndShoot; // Reference to the player script
+
+    // Set the reference to the PlayerAimAndShoot script
+    public void SetPlayerAimAndShoot(PlayerAimAndShoot player)
+    {
+        playerAimAndShoot = player;
+    }
 
     public void Fire()
     {
@@ -20,9 +27,14 @@ public class MachineGun : MonoBehaviour, IGuns
             ammoCount--;
             nextFireTime = Time.time + fireRate;
         }
-        else if (ammoCount <= 0)
+        else
         {
             Debug.Log("Out of Ammo");
+            // Call DropGun from the player's script when out of ammo
+            if (playerAimAndShoot != null)
+            {
+                playerAimAndShoot.DropGun();
+            }
         }
     }
 

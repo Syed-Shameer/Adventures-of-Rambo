@@ -9,6 +9,13 @@ public class AssaultRifle : MonoBehaviour, IGuns
     [SerializeField] private float fireRate = 0.1f; // Fast firing rate
     [SerializeField] private int ammoCount = 30;   // Larger ammo count
     private float nextFireTime = 0f;
+    private PlayerAimAndShoot playerAimAndShoot; // Reference to the player script
+
+    // Set the reference to the PlayerAimAndShoot script
+    public void SetPlayerAimAndShoot(PlayerAimAndShoot player)
+    {
+        playerAimAndShoot = player;
+    }
 
     public void Fire()
     {
@@ -20,9 +27,15 @@ public class AssaultRifle : MonoBehaviour, IGuns
             ammoCount--;
             nextFireTime = Time.time + fireRate;
         }
-        else if (ammoCount <= 0)
+        else 
         {
             Debug.Log("Out of Ammo");
+            // Call DropGun from the player's script when out of ammo
+            if (playerAimAndShoot != null)
+            {
+                playerAimAndShoot.DropGun();
+                Debug.Log("DropGun");
+            }
         }
     }
 

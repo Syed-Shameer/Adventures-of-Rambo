@@ -9,6 +9,13 @@ public class Shotgun : MonoBehaviour, IGuns
     [SerializeField] private float fireRate = 1.0f; // Slower fire rate
     [SerializeField] private int ammoCount = 6; // Smaller magazine size
     [SerializeField] private int pelletsPerShot = 5; // Number of pellets fired in a spread
+    private PlayerAimAndShoot playerAimAndShoot; // Reference to the player script
+
+    // Set the reference to the PlayerAimAndShoot script
+    public void SetPlayerAimAndShoot(PlayerAimAndShoot player)
+    {
+        playerAimAndShoot = player;
+    }
 
     public void Fire()
     {
@@ -28,6 +35,11 @@ public class Shotgun : MonoBehaviour, IGuns
         else
         {
             Debug.Log("Out of Ammo");
+            // Call DropGun from the player's script when out of ammo
+            if (playerAimAndShoot != null)
+            {
+                playerAimAndShoot.DropGun();
+            }
         }
     }
 

@@ -7,6 +7,7 @@ public interface IGuns
     void Fire();
     float GetFireRate();
     int GetAmmoCount();
+    void SetPlayerAimAndShoot(PlayerAimAndShoot player);
 }
 
 

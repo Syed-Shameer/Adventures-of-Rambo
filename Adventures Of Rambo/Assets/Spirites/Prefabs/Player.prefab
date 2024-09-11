@@ -1902,8 +1902,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 165f4499d609e984098e0c2a0cace220, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gun: {fileID: 0}
-  bullet: {fileID: 2332108662131015611, guid: 11d2df487b4918c429a4a1c11b0f926a, type: 3}
+  gun: {fileID: 3904228645896606866, guid: 51651d7a7ad1c5444b84f387ee299353, type: 3}
   bulletSpawnPoint: {fileID: 0}
   dropPoint: {fileID: 6476288874635408078}
   gunAttachmentPoint: {fileID: 723759591571878058}

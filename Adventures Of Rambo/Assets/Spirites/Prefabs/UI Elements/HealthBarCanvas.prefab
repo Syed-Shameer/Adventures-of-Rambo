@@ -87,6 +87,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f758498bb3d8d634a9d71a1b288bb7e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthFillImage: {fileID: 4361318977550343297}
+  playerHealth: {fileID: 0}
 --- !u!1 &4361318977724027503
 GameObject:
   m_ObjectHideFlags: 0

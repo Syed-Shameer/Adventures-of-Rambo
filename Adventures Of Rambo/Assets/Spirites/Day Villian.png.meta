@@ -1,0 +1,764 @@
+fileFormatVersion: 2
+guid: 4e2159e7db486034580abe444e494b0f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4949631935554262004
+    second: mecha_2a_tex_0
+  - first:
+      213: 6982647602444358956
+    second: mecha_2a_tex_1
+  - first:
+      213: 205894125392044045
+    second: mecha_2a_tex_2
+  - first:
+      213: 1223526588374270166
+    second: mecha_2a_tex_3
+  - first:
+      213: -1549477833809599790
+    second: mecha_2a_tex_4
+  - first:
+      213: -4718631500263534637
+    second: mecha_2a_tex_5
+  - first:
+      213: 4003642588016962112
+    second: mecha_2a_tex_6
+  - first:
+      213: -4419304840883515536
+    second: mecha_2a_tex_7
+  - first:
+      213: -3633245298117730036
+    second: mecha_2a_tex_8
+  - first:
+      213: -8431522440819175862
+    second: mecha_2a_tex_9
+  - first:
+      213: 3757734644076304137
+    second: mecha_2a_tex_10
+  - first:
+      213: -5720811020606657775
+    second: mecha_2a_tex_11
+  - first:
+      213: -2544553375595938408
+    second: mecha_2a_tex_12
+  - first:
+      213: -450516047752939983
+    second: mecha_2a_tex_13
+  - first:
+      213: 5266463417280735494
+    second: mecha_2a_tex_14
+  - first:
+      213: 4079021754334752443
+    second: mecha_2a_tex_15
+  - first:
+      213: 142862291373230956
+    second: mecha_2a_tex_16
+  - first:
+      213: 2130188715643935995
+    second: mecha_2a_tex_17
+  - first:
+      213: 5819974850673617570
+    second: mecha_2a_tex_18
+  - first:
+      213: 4594481328373401531
+    second: mecha_2a_tex_19
+  - first:
+      213: -1728274836524503520
+    second: mecha_2a_tex_20
+  - first:
+      213: 8734161970874230524
+    second: mecha_2a_tex_21
+  - first:
+      213: -8204415766171376795
+    second: mecha_2a_tex_22
+  - first:
+      213: 3034215282736821575
+    second: mecha_2a_tex_23
+  - first:
+      213: 5815732315202899246
+    second: mecha_2a_tex_24
+  - first:
+      213: 5255065807247840145
+    second: mecha_2a_tex_25
+  - first:
+      213: -3143765171553774112
+    second: mecha_2a_tex_26
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: mecha_2a_tex_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 300
+        width: 234
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0ceb589aff5f4bb0800000000000000
+      internalID: -4949631935554262004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mecha_2a_tex_1
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 358
+        width: 151
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c25dd6faff857e060800000000000000
+      internalID: 6982647602444358956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mecha_2a_tex_2
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 400
+        width: 155
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d00255dbd9b7bd200800000000000000
+      internalID: 205894125392044045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mecha_2a_tex_3
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 425
+        width: 112
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d04b4913f6daf010800000000000000
+      internalID: 1223526588374270166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mecha_2a_tex_4
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 423
+        width: 109
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d2ef60ae162f7ae0800000000000000
+      internalID: -1549477833809599790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mecha_2a_tex_5
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 429
+        width: 111
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dfc2d0a6ad048eb0800000000000000
+      internalID: -4718631500263534637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mecha_2a_tex_6
+      rect:
+        serializedVersion: 2
+        x: 923
+        y: 434
+        width: 90
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04a606ab8bbcf8730800000000000000
+      internalID: 4003642588016962112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mecha_2a_tex_7
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 239
+        width: 178
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07f49f469a97ba2c0800000000000000
+      internalID: -4419304840883515536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mecha_2a_tex_8
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 282
+        width: 103
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c01a5dfa6ae149dc0800000000000000
+      internalID: -3633245298117730036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mecha_2a_tex_9
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 332
+        width: 97
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4e0d3f13073dfa80800000000000000
+      internalID: -8431522440819175862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mecha_2a_tex_10
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 344
+        width: 108
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 907d85cdfb7262430800000000000000
+      internalID: 3757734644076304137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mecha_2a_tex_11
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 327
+        width: 87
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11ba999dfa89b90b0800000000000000
+      internalID: -5720811020606657775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mecha_2a_tex_12
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 47
+        width: 182
+        height: 251
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89d359fbf2eefacd0800000000000000
+      internalID: -2544553375595938408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mecha_2a_tex_13
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 47
+        width: 177
+        height: 251
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 136b210aa027fb9f0800000000000000
+      internalID: -450516047752939983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mecha_2a_tex_14
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 251
+        width: 102
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 609ab99339c361940800000000000000
+      internalID: 5266463417280735494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mecha_2a_tex_15
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 268
+        width: 91
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbea63a8ca89b9830800000000000000
+      internalID: 4079021754334752443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mecha_2a_tex_16
+      rect:
+        serializedVersion: 2
+        x: 747
+        y: 241
+        width: 84
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6b89114f7c8bf100800000000000000
+      internalID: 142862291373230956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mecha_2a_tex_17
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 255
+        width: 109
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfc9084c953ff8d10800000000000000
+      internalID: 2130188715643935995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mecha_2a_tex_18
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 120
+        width: 137
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2aaab188a44b4c050800000000000000
+      internalID: 5819974850673617570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mecha_2a_tex_19
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 63
+        width: 81
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb78cd0fc60e2cf30800000000000000
+      internalID: 4594481328373401531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mecha_2a_tex_20
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 204
+        width: 91
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02ee5b6613fe308e0800000000000000
+      internalID: -1728274836524503520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mecha_2a_tex_21
+      rect:
+        serializedVersion: 2
+        x: 747
+        y: 163
+        width: 109
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf62fa4790af53970800000000000000
+      internalID: 8734161970874230524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mecha_2a_tex_22
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 191
+        width: 110
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 563adbb545f042e80800000000000000
+      internalID: -8204415766171376795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mecha_2a_tex_23
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 20
+        width: 127
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 745f69349b2bb1a20800000000000000
+      internalID: 3034215282736821575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mecha_2a_tex_24
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 87
+        width: 101
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2dcd644ab1a5b050800000000000000
+      internalID: 5815732315202899246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mecha_2a_tex_25
+      rect:
+        serializedVersion: 2
+        x: 936
+        y: 117
+        width: 75
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1931f48528ebde840800000000000000
+      internalID: 5255065807247840145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mecha_2a_tex_26
+      rect:
+        serializedVersion: 2
+        x: 936
+        y: 38
+        width: 70
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e5da4c9b3a1f54d0800000000000000
+      internalID: -3143765171553774112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

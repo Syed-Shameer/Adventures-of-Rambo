@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System;
 using UnityEngine;
 
 public class Health : MonoBehaviour
@@ -9,6 +8,12 @@ public class Health : MonoBehaviour
     private RagdollController ragdollController;
     private Rigidbody2D mainRigidbody;
     private PlayerMovement playerMovement; // Reference to the input handling script
+
+    // Event to notify health changes
+    public event Action OnHealthChanged;
+
+    public int MaxHealth => maxHealth;
+    public int CurrentHealth => currentHealth;
 
     private void Start()
     {
@@ -21,11 +26,11 @@ public class Health : MonoBehaviour
         playerMovement = GetComponent<PlayerMovement>(); // Adjust this line if your input script has a different name
     }
 
-
     // Method to apply damage to the character
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
+        OnHealthChanged?.Invoke(); // Notify that health has changed
 
         // Check if the health is less than or equal to zero
         if (currentHealth <= 0)
@@ -50,7 +55,7 @@ public class Health : MonoBehaviour
     }
 
     // Condition 1: Player dies when falling badly
-   private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         // Check if the collision is with an object tagged as "Enemy"
         if (collision.gameObject.CompareTag("Enemy"))
@@ -70,5 +75,7 @@ public class Health : MonoBehaviour
         {
             playerMovement.enabled = true;
         }
+
+        OnHealthChanged?.Invoke(); // Notify that health has changed
     }
 }

@@ -1903,6 +1903,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gun: {fileID: 0}
+  bullet: {fileID: 2332108662131015611, guid: 11d2df487b4918c429a4a1c11b0f926a, type: 3}
   bulletSpawnPoint: {fileID: 0}
   dropPoint: {fileID: 6476288874635408078}
   gunAttachmentPoint: {fileID: 723759591571878058}

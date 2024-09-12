@@ -194,7 +194,8 @@ MonoBehaviour:
     type: 3}
   bulletSpawnPoint: {fileID: 9013586341321967684}
   fireRate: 0.5
-  ammoCount: 12
+  ammoCount: 15
+  fireSound: {fileID: 8300000, guid: 4497333e78d5fbc4990c66ee3477fce2, type: 3}
 --- !u!82 &2260683050504795515
 AudioSource:
   m_ObjectHideFlags: 0

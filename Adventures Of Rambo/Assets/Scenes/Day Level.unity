@@ -698,12 +698,12 @@ PrefabInstance:
     - target: {fileID: 4191555112112493719, guid: 66739e7981f09d148b150cadbd16e9b6,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -67.96
+      value: -70.59
       objectReference: {fileID: 0}
     - target: {fileID: 4191555112112493719, guid: 66739e7981f09d148b150cadbd16e9b6,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.47
+      value: 0.34
       objectReference: {fileID: 0}
     - target: {fileID: 4191555112112493719, guid: 66739e7981f09d148b150cadbd16e9b6,
         type: 3}
@@ -835,6 +835,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -9.13
       objectReference: {fileID: 0}
+    - target: {fileID: 8327514290775934839, guid: 66739e7981f09d148b150cadbd16e9b6,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8712397258266577082, guid: 66739e7981f09d148b150cadbd16e9b6,
         type: 3}
       propertyPath: m_SortingOrder
@@ -861,7 +866,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 8b9df619a7954c04488a7f52fbccce62, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1

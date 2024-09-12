@@ -26,11 +26,9 @@ public class Explosive : MonoBehaviour
     // Handle triggers with bullets and other objects
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Trigger detected with: " + collision.gameObject.name);
 
         if (collision.CompareTag("bullet"))
         {
-            Debug.Log("Trigger with bullet detected.");
 
             BulletBehaviour bullet = collision.GetComponent<BulletBehaviour>();
             if (bullet != null)
@@ -69,8 +67,8 @@ public class Explosive : MonoBehaviour
         }
 
         // Destroy the explosion effect and barrel after the duration
-        Destroy(explosion, explosionDuration); // Destroy explosion effect after it finishes
         Destroy(gameObject, explosionDuration); // Destroy barrel after the explosion effect
+        Destroy(explosion, explosionDuration); // Destroy explosion effect after it finishes
     }
 
     // To visualize explosion radius in the editor

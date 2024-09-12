@@ -4,32 +4,79 @@ using UnityEngine;
 
 public class Explosive : MonoBehaviour
 {
-    [SerializeField] private GameObject explosionPrefab; // Prefab of the particle system (explosion)
-    [SerializeField] private float explosionDuration = 2f; // Time for the explosion to disappear
+    [SerializeField] private float health = 1f; // Barrel health before it explodes
+    [SerializeField] private GameObject explosionEffect; // Reference to particle system prefab for explosion
+    [SerializeField] private float explosionRadius = 5f; // Radius of the explosion
+    [SerializeField] private int explosionDamage = 40; // Damage dealt to nearby objects
+    [SerializeField] private float explosionDuration = 2f; // Time before the barrel is destroyed after explosion
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private bool hasExploded = false;
+
+    // Method to take damage when hit
+    public void TakeDamage(float damage)
     {
-        // Check if the object hit is a bullet or anything that triggers the explosion
-        if (collision.gameObject.CompareTag("bullet") || collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("Obstacle"))
-        {
-            // Trigger explosion effect
-            Explode();
+        health -= damage;
 
-            // Destroy the bullet or other objects involved in the collision
-            Destroy(collision.gameObject);
+        if (health <= 0 && !hasExploded)
+        {
+            Explode();
         }
     }
 
+    // Handle triggers with bullets and other objects
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log("Trigger detected with: " + collision.gameObject.name);
+
+        if (collision.CompareTag("bullet"))
+        {
+            Debug.Log("Trigger with bullet detected.");
+
+            BulletBehaviour bullet = collision.GetComponent<BulletBehaviour>();
+            if (bullet != null)
+            {
+                TakeDamage(bullet.GetDamage());
+                Destroy(collision.gameObject); // Destroy the bullet on impact
+            }
+        }
+    }
+
+    // Explosion logic
     private void Explode()
     {
-        // Instantiate the explosion particle system at the current position
-        GameObject explosion = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+        if (hasExploded) return; // Prevent multiple explosions
 
-        // Destroy the explosion object after the particle system duration
-        Destroy(explosion, explosionDuration);
+        hasExploded = true;
 
-        // Optionally, destroy the object that exploded
-        Destroy(gameObject);
-        Debug.Log("Explode");
+        // Instantiate explosion effect and play it
+        GameObject explosion = Instantiate(explosionEffect, transform.position, Quaternion.identity);
+        ParticleSystem ps = explosion.GetComponent<ParticleSystem>();
+        if (ps != null)
+        {
+            ps.Play(); // Manually trigger the particle system to play
+        }
+
+        // Deal damage to nearby objects
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, explosionRadius);
+        foreach (Collider2D nearbyObject in colliders)
+        {
+            // Apply damage to objects with health components (e.g., enemies, player, etc.)
+            Health target = nearbyObject.GetComponent<Health>();
+            if (target != null)
+            {
+                target.TakeDamage(explosionDamage);
+            }
+        }
+
+        // Destroy the explosion effect and barrel after the duration
+        Destroy(explosion, explosionDuration); // Destroy explosion effect after it finishes
+        Destroy(gameObject, explosionDuration); // Destroy barrel after the explosion effect
+    }
+
+    // To visualize explosion radius in the editor
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, explosionRadius);
     }
 }

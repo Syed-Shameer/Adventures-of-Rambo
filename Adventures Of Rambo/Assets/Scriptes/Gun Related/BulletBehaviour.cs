@@ -26,7 +26,7 @@ public class BulletBehaviour : MonoBehaviour
         SetRBStats();
     }
 
-
+    
     public enum BulletType{
         Normal,
         Physics
@@ -107,5 +107,9 @@ public class BulletBehaviour : MonoBehaviour
     } else {
         return physicsBulletSpeed;
     }
+    }
+    // Method to return the damage value of the bullet
+    public float GetDamage() {
+        return damage;
     }
 }

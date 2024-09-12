@@ -5,8 +5,8 @@ using UnityEngine.InputSystem;
 
 public class PlayerAimAndShoot : MonoBehaviour
 {
-    [SerializeField] private GameObject gun;
-    [SerializeField] private Transform bulletSpawnPoint;
+     private GameObject gun;
+     private Transform bulletSpawnPoint;
     private IGuns currentGun;
     [SerializeField] private Transform dropPoint; // Point where the weapon will be dropped
     [SerializeField] private Transform gunAttachmentPoint;

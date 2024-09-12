@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 6740140479817017523}
   m_Layer: 0
   m_Name: Machine Gun
-  m_TagString: Untagged
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -159,11 +159,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0889f9e7d3dc5454ba7aaf74bee2b366, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireRate: 0.1
-  ammoCount: 30
   bulletPrefab: {fileID: 2332108662131015611, guid: 11d2df487b4918c429a4a1c11b0f926a,
     type: 3}
   bulletSpawnPoint: {fileID: 5611334011058909657}
+  fireRate: 0.1
+  ammoCount: 30
 --- !u!1 &4526032164846883456
 GameObject:
   m_ObjectHideFlags: 0

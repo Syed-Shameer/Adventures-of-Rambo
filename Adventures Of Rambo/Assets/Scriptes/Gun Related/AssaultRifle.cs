@@ -10,6 +10,14 @@ public class AssaultRifle : MonoBehaviour, IGuns
     [SerializeField] private int ammoCount = 30;   // Larger ammo count
     private float nextFireTime = 0f;
     private PlayerAimAndShoot playerAimAndShoot; // Reference to the player script
+    [SerializeField] private AudioClip fireSound; // Reference to the gunshot sound effect
+    private AudioSource audioSource; // Reference to the AudioSource component
+
+    private void Start()
+    {
+        // Get the AudioSource component attached to the gun GameObject
+        audioSource = GetComponent<AudioSource>();
+    }
 
     // Set the reference to the PlayerAimAndShoot script
     public void SetPlayerAimAndShoot(PlayerAimAndShoot player)
@@ -26,6 +34,12 @@ public class AssaultRifle : MonoBehaviour, IGuns
 
             ammoCount--;
             nextFireTime = Time.time + fireRate;
+
+            // Play the firing sound
+            if (audioSource != null && fireSound != null)
+            {
+                audioSource.PlayOneShot(fireSound);
+            }
         }
         else 
         {

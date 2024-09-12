@@ -1730,6 +1730,8 @@ GameObject:
   - component: {fileID: 5037142862804833590}
   - component: {fileID: 5037142862804833589}
   - component: {fileID: 2164386908345708954}
+  - component: {fileID: 3897791615607246610}
+  - component: {fileID: 6487956159804026388}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1902,7 +1904,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 165f4499d609e984098e0c2a0cace220, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gun: {fileID: 3904228645896606866, guid: 51651d7a7ad1c5444b84f387ee299353, type: 3}
   bulletSpawnPoint: {fileID: 0}
   dropPoint: {fileID: 6476288874635408078}
   gunAttachmentPoint: {fileID: 723759591571878058}
@@ -1937,6 +1938,31 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &3897791615607246610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5037142862804833580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b49f78bcc8e03c04f9fa2d46dca7a3a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+--- !u!114 &6487956159804026388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5037142862804833580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b49288a6dbd567f438519a9f39a30838, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5037142862899990554
 GameObject:
   m_ObjectHideFlags: 0

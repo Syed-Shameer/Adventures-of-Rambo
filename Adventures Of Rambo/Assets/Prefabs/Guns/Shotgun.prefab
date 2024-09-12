@@ -189,13 +189,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17058ecfeaa61984f9022bdeb62e2a44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pelletPrefab: {fileID: 2332108662131015611, guid: 11d2df487b4918c429a4a1c11b0f926a,
+  bulletPrefab: {fileID: 2332108662131015611, guid: 11d2df487b4918c429a4a1c11b0f926a,
     type: 3}
   bulletSpawnPoint: {fileID: 3328671120509060906}
-  pelletCount: 8
-  spreadAngle: 10
   fireRate: 1
   ammoCount: 6
+  pelletsPerShot: 5
   fireSound: {fileID: 8300000, guid: 7a6e710047226e3478b597d082b25880, type: 3}
 --- !u!82 &8538200299192942008
 AudioSource:
@@ -209,7 +208,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 7a6e710047226e3478b597d082b25880, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.854
   m_Pitch: 1
   Loop: 0
   Mute: 0

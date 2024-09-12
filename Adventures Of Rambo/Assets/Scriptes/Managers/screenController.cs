@@ -14,7 +14,7 @@ public class SceneController : MonoBehaviour
 
     private IEnumerator LoadSceneWithTransition(string sceneName)
     {
-        transitionAnimator.SetTrigger("StartTransition"); // Trigger crossfade animation
+        transitionAnimator.SetTrigger("Start"); // Trigger crossfade animation
         yield return new WaitForSeconds(1f); // Wait for animation duration
         SceneManager.LoadScene(sceneName);
     }

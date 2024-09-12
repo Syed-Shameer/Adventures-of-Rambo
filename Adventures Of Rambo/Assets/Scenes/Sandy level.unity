@@ -1908,6 +1908,61 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1433414999910597346, guid: 0357c836f1f17b342b56b0d6d4afe0ff,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.0469998
+      objectReference: {fileID: 0}
+    - target: {fileID: 1433415000037377676, guid: 0357c836f1f17b342b56b0d6d4afe0ff,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.92
+      objectReference: {fileID: 0}
+    - target: {fileID: 1433415000239404685, guid: 0357c836f1f17b342b56b0d6d4afe0ff,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 1433415000315668523, guid: 0357c836f1f17b342b56b0d6d4afe0ff,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 1433415000315668523, guid: 0357c836f1f17b342b56b0d6d4afe0ff,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.29
+      objectReference: {fileID: 0}
+    - target: {fileID: 1433415000315668523, guid: 0357c836f1f17b342b56b0d6d4afe0ff,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 26.68733
+      objectReference: {fileID: 0}
+    - target: {fileID: 1433415000886227569, guid: 0357c836f1f17b342b56b0d6d4afe0ff,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1433415000886227569, guid: 0357c836f1f17b342b56b0d6d4afe0ff,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 26.68733
+      objectReference: {fileID: 0}
+    - target: {fileID: 1433415000886227569, guid: 0357c836f1f17b342b56b0d6d4afe0ff,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1433415000886227569, guid: 0357c836f1f17b342b56b0d6d4afe0ff,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1433415000886227569, guid: 0357c836f1f17b342b56b0d6d4afe0ff,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1433415001542756405, guid: 0357c836f1f17b342b56b0d6d4afe0ff,
         type: 3}
       propertyPath: m_RootOrder
@@ -1968,5 +2023,50 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sandy Boss
       objectReference: {fileID: 0}
+    - target: {fileID: 1433415001734669587, guid: 0357c836f1f17b342b56b0d6d4afe0ff,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 1433415001734669587, guid: 0357c836f1f17b342b56b0d6d4afe0ff,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.91
+      objectReference: {fileID: 0}
+    - target: {fileID: 1433415001803616237, guid: 0357c836f1f17b342b56b0d6d4afe0ff,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 1433415001803616237, guid: 0357c836f1f17b342b56b0d6d4afe0ff,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.85
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0357c836f1f17b342b56b0d6d4afe0ff, type: 3}
+--- !u!1 &1433415000668712992 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1433415001542756406, guid: 0357c836f1f17b342b56b0d6d4afe0ff,
+    type: 3}
+  m_PrefabInstance: {fileID: 1433415000668712991}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1433415000668712993
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1433415000668712992}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 319db3576ece20c4488f9b988ca88050, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

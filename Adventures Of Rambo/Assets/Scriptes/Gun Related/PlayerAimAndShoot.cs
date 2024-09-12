@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 public class PlayerAimAndShoot : MonoBehaviour
 {
      private GameObject gun;
-     private Transform bulletSpawnPoint;
+    [SerializeField] private Transform bulletSpawnPoint;
     private IGuns currentGun;
     [SerializeField] private Transform dropPoint; // Point where the weapon will be dropped
     [SerializeField] private Transform gunAttachmentPoint;
@@ -14,11 +14,13 @@ public class PlayerAimAndShoot : MonoBehaviour
 
     // Update is called once per frame
     void Update()
+    { // Only handle gun actions when a gun is equipped
+    if (gun != null)
     {
         HandleGunRotation();
         HandleGunShooting();
     }
-
+    }
     public void EquipGun(GameObject newGun)
     {
         if (gun != null)
@@ -58,6 +60,8 @@ public class PlayerAimAndShoot : MonoBehaviour
             gun.AddComponent<Rigidbody2D>(); // Optionally, add physics for falling
             gun.AddComponent<BoxCollider2D>(); // Add collider to make it interactable
             gun.tag = "Weapon"; // Tag it as a weapon to allow pickup again
+
+            Destroy(gun, 3f);
 
             // Remove the reference to the gun (player is no longer holding it)
             gun = null;

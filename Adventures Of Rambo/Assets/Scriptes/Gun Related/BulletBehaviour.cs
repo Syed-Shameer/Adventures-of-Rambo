@@ -108,8 +108,5 @@ public class BulletBehaviour : MonoBehaviour
         return physicsBulletSpeed;
     }
     }
-    // Method to return the damage value of the bullet
-    public float GetDamage() {
-        return damage;
-    }
+    
 }

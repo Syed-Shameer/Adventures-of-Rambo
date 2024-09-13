@@ -1,36 +1,61 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class EnemyAttack : MonoBehaviour
 {
-    public Transform player;
-    public float attackRange = 1.5f;
-    public int attackDamage = 10;
-    public float attackCooldown = 1.5f;
-    private float attackCooldownTimer;
+    public GameObject throwablePrefab;     // Throwable prefab reference (e.g., snowball, rock, etc.)
+    public Transform throwableSpawnPoint;  // Spawn point for the throwable
+    public float attackCooldown = 2f;      // Cooldown time between attacks
+    public float detectionRange = 10f;     // Range at which the enemy can attack
+    public float throwSpeed = 5f;          // Speed of the throwable object
+    private Transform player;              // Reference to the player's transform
+    private Animator animator;             // Reference to the Animator component
+    private float lastAttackTime = 0f;     // Tracks the time of the last attack
+
+    private void Start()
+    {
+        // Find the player by tag (make sure your player is tagged as "Player")
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+
+        // Get the Animator component
+        animator = GetComponent<Animator>();
+    }
 
     private void Update()
     {
-        attackCooldownTimer -= Time.deltaTime;
+        if (player == null) return;
 
+        // Calculate the distance between the enemy and the player
         float distanceToPlayer = Vector2.Distance(transform.position, player.position);
 
-        if (distanceToPlayer < attackRange && attackCooldownTimer <= 0)
+        // Check if the player is within attack range
+        if (distanceToPlayer < detectionRange)
         {
-            AttackPlayer();
-            attackCooldownTimer = attackCooldown; // Reset cooldown
+            // If enough time has passed since the last attack, perform a new attack
+            if (Time.time > lastAttackTime + attackCooldown)
+            {
+                ThrowAtPlayer();
+                lastAttackTime = Time.time;
+            }
         }
     }
 
-    void AttackPlayer()
+    // Method to throw the throwable object (e.g., snowball or rock) at the player
+    private void ThrowAtPlayer()
     {
-        // Assume player has a PlayerHealth script
-        PlayerHealth playerHealth = player.GetComponent<PlayerHealth>();
-        if (playerHealth != null)
-        {
-            playerHealth.TakeDamage(attackDamage);
-        }
+        // Instantiate the throwable object at the spawn point
+        GameObject throwable = Instantiate(throwablePrefab, throwableSpawnPoint.position, throwableSpawnPoint.rotation);
+
+        // Calculate the direction towards the player
+        Vector2 direction = (player.position - throwableSpawnPoint.position).normalized;
+
+        // Set the velocity of the throwable to move towards the player
+        Rigidbody2D rb = throwable.GetComponent<Rigidbody2D>();
+        rb.velocity = direction * throwSpeed;
+
+        // Optional: Rotate the throwable towards the player (for projectile visuals)
+        throwable.transform.right = direction;
+
+        // Trigger attack animation
+        animator.SetTrigger("Attack"); // Assuming you have an "Attack" trigger in your animator
     }
 }
-

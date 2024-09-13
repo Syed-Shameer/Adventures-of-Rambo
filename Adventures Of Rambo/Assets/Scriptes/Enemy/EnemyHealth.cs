@@ -17,6 +17,7 @@ public class EnemyHealth : MonoBehaviour, IDamagable
     public void Damage(float damageAmount)
     {
         TakeDamage((int)damageAmount);
+        Debug.Log("damage happening");
     }
 
     // Method to apply damage to the enemy

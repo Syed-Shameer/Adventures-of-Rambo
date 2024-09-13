@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-public class Health : MonoBehaviour
+public class Health : MonoBehaviour, IDamagable
 {
     [SerializeField] private int maxHealth = 100; // Maximum health value
     private int currentHealth; // Current health value
@@ -39,6 +39,12 @@ public class Health : MonoBehaviour
         }
     }
 
+    // Method from IDamagable interface to handle external damage
+    public void Damage(float damageAmount)
+    {
+        TakeDamage((int)damageAmount); // Apply the damage
+    }
+
     // Method to handle character death
     private void Die()
     {
@@ -61,6 +67,13 @@ public class Health : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             Die();
+        }
+
+        // Check for collision with projectiles like snowballs or bullets
+        IDamagable damagable = collision.gameObject.GetComponent<IDamagable>();
+        if (damagable != null)
+        {
+            TakeDamage(10); // Example damage value
         }
     }
 

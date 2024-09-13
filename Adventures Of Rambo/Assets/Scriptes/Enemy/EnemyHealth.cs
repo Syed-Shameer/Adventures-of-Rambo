@@ -17,7 +17,7 @@ public class EnemyHealth : MonoBehaviour, IDamagable
     public void Damage(float damageAmount)
     {
         TakeDamage((int)damageAmount);
-        Debug.Log("damage happening");
+        Debug.Log("Damage happening: " + damageAmount);
     }
 
     // Method to apply damage to the enemy
@@ -44,16 +44,5 @@ public class EnemyHealth : MonoBehaviour, IDamagable
     {
         currentHealth = maxHealth;
         OnHealthChanged?.Invoke();
-    }
-
-    // Optionally, you can add more logic for interaction (e.g., if the enemy collides with a player or hazard)
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        // Add collision logic if needed, such as dealing damage to the player on collision
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            // Example: Damage the player when the enemy collides with them
-            collision.gameObject.GetComponent<IDamagable>()?.Damage(10);
-        }
     }
 }

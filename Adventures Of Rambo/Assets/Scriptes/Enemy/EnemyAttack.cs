@@ -55,7 +55,5 @@ public class EnemyAttack : MonoBehaviour
         // Optional: Rotate the throwable towards the player (for projectile visuals)
         throwable.transform.right = direction;
 
-        // Trigger attack animation
-        animator.SetTrigger("Attack"); // Assuming you have an "Attack" trigger in your animator
     }
 }

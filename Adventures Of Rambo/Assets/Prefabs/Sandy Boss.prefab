@@ -527,6 +527,10 @@ GameObject:
   - component: {fileID: 185119795784800145}
   - component: {fileID: 3670662764770658848}
   - component: {fileID: -3790717985357682957}
+  - component: {fileID: 2543721298792138044}
+  - component: {fileID: 3459663940522980830}
+  - component: {fileID: 1980804614950278786}
+  - component: {fileID: 4807019996329036404}
   m_Layer: 0
   m_Name: Sandy Boss
   m_TagString: Enemy
@@ -651,6 +655,66 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &2543721298792138044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1433415001542756406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 277f402877e389b46980be2c78a0b808, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 5
+  scoreValueOnDamage: 1
+  scoreValueOnDeath: 10
+--- !u!114 &3459663940522980830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1433415001542756406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c74c70e4d345f454d8d3179d1a6abb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  detectionRange: 10
+  chaseSpeed: 2
+  idleSpeed: 0
+--- !u!114 &1980804614950278786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1433415001542756406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cd7892a842c99247a287abc862cdefc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  throwablePrefab: {fileID: 0}
+  throwableSpawnPoint: {fileID: 0}
+  attackCooldown: 2
+  detectionRange: 10
+  throwSpeed: 5
+--- !u!114 &4807019996329036404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1433415001542756406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8027a9b6ae9dfa4f91c69182f213aa4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 50
 --- !u!1 &1433415001734669589
 GameObject:
   m_ObjectHideFlags: 0

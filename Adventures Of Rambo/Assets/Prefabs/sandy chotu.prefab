@@ -12,9 +12,13 @@ GameObject:
   - component: {fileID: 3652126900300719694}
   - component: {fileID: 3263259765792564117}
   - component: {fileID: 5872562106459072733}
+  - component: {fileID: 5593458962668933916}
+  - component: {fileID: 3253909213501449223}
+  - component: {fileID: 89021976720759522}
+  - component: {fileID: 3324048590657627475}
   m_Layer: 0
   m_Name: sandy chotu
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -52,7 +56,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -127.590065, y: -0.58916473}
+  m_Offset: {x: -129.00906, y: 1.8121891}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -63,7 +67,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.3164215, y: 7.0884247}
+  m_Size: {x: 1.4784698, y: 2.285717}
   m_EdgeRadius: 0
 --- !u!50 &3263259765792564117
 Rigidbody2D:
@@ -105,6 +109,66 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5593458962668933916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3438027771523403684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 277f402877e389b46980be2c78a0b808, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 5
+  scoreValueOnDamage: 1
+  scoreValueOnDeath: 10
+--- !u!114 &3253909213501449223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3438027771523403684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c74c70e4d345f454d8d3179d1a6abb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  detectionRange: 10
+  chaseSpeed: 2
+  idleSpeed: 0
+--- !u!114 &89021976720759522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3438027771523403684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cd7892a842c99247a287abc862cdefc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  throwablePrefab: {fileID: 0}
+  throwableSpawnPoint: {fileID: 0}
+  attackCooldown: 2
+  detectionRange: 10
+  throwSpeed: 5
+--- !u!114 &3324048590657627475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3438027771523403684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8027a9b6ae9dfa4f91c69182f213aa4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 50
 --- !u!1 &3807219475131804401
 GameObject:
   m_ObjectHideFlags: 0
